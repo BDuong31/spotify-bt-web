@@ -217,6 +217,21 @@ hr{
     justify-content: center;
     position: relative;
 }
+.show_hide_button::after{
+    content: "";
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    transition: border-color 200ms ease-in;
+    box-sizing: border-box;
+    bottom: 5px;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    inline-size: 24px;
+}
+.show_hide_button:hover::after{
+    border-bottom-color: #b3b3b3;
+}
 .show_hide_button span{
     display: flex;
 }
